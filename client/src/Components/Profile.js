@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import { Card } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
@@ -19,14 +19,15 @@ function Profile() {
           happy to be here
         </Card.Subtitle>
         <Card.Text>
-          {" "}
+          {/* {" "}
           src={client.cover_photo?.url}
-          sx=
-          {{
+          sx={
+            {
             position: "relative",
-            width: 150,
+            width: 150, // ???? selon react-bootstrap, ce code ne fonctionne pas
             height: 150,
-          }}
+            }
+          } */}
         </Card.Text>
 
         <a

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./Cart.css";
 import { Link } from "react-router-dom";
 const Cart = () => {

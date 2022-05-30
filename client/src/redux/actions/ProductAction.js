@@ -1,7 +1,6 @@
 import axios from "axios";
 import {
   PRODUCT_LIST_REQUEST,
-  PRODUCT_LIST_SUCCESS,
   PRODUCT_LIST_FAIL,
   PRODUCT_UPDATE_REQUEST,
   PRODUCT_UPDATE_SUCCESS,
@@ -14,7 +13,8 @@ import {
   PRODUCT_CREATE_FAIL,
   ADD_FILTER,
   PRODUCT_LIST_REQUEST_DETAILS,
-} from "../types/product";
+  PRODUCT_LIST_SUCCESS
+} from "../types/Product";
 
 const addFilter = (key, value) => async (dispatch) => {
   dispatch({ type: ADD_FILTER, payload: { key, value } });

@@ -1,12 +1,11 @@
-import React from "react";
-import { useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Carousel } from "react-bootstrap";
 import { listProducts as list } from "../redux/actions/ProductAction";
 function Home() {
   const dispatch = useDispatch();
   const getProducts = useSelector((state) => state.listProducts);
-  const { products, loading, error } = listProducts;
+  const { products, loading, error } = list;
   useEffect(() => {
     dispatch(list());
   }, [dispatch]);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./ProductList.css";
 import { Link } from "react-router-dom";
 function ProductList({ imageUrl, name, prix, description, productId }) {
