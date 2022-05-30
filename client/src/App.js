@@ -1,10 +1,13 @@
 import "./App.css";
+import React, {useState, useEffect} from "react";
+
+import { Routes, Route } from "react-router-dom";
+
 import Navigation from "./Components/Navigation";
 import Login from "./Components/Login";
 import Profile from "./Components/Profile";
 import Register from "./Components/Register";
 
-import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import PrivateRoutes from "./PrivateRoutes/PrivateRoutes";
 
@@ -12,7 +15,6 @@ import Footer from "./Components/Footer";
 import ProductList from "./Components/ProductList";
 import Backdrop from "./Components/Backdrop";
 import SideDrower from "./Components/SideDrower";
-import { useState } from "react";
 import CartSecreen from "./Secreens/CartSecreen";
 import ProductSecreen from "./Secreens/ProductSecreen";
 

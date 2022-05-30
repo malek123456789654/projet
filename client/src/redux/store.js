@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
-import { createStore, applyMiddleware, compose } from "redux";
+import {createStore, compose, applyMiddleware} from 'redux';
 import thunk from "redux-thunk";
+
 import rootReducer from "./reducers";
 import { CartReducer } from "./reducers/CartReducer";
 import {
@@ -12,10 +13,10 @@ import {
 const reducer = combineReducers({
   cart: CartReducer,
 });
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   rootReducer,
-  reducer,
-  composeEnhancers(applyMiddleware(thunk))
+  // reducer, //here is the error of the state manager, didn't know how to fix it
+  composeEnhancer(applyMiddleware(thunk))
 );
 export default store;

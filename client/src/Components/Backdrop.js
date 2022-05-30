@@ -1,5 +1,6 @@
-import "./Backdrop.css";
+import React, {useState, useEffect} from "react";
 
+import "./Backdrop.css";
 const Backdrop = ({ show, click }) => {
   return show && <div className="backdrop" onClick={click}></div>;
 };

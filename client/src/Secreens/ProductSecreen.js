@@ -1,9 +1,10 @@
 import React from "react";
-import "./ProductSecreen.css";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { listProductsDetails } from "../redux/actions/ProductAction";
 import { addToCart } from "../redux/actions/CartAction";
+import "./ProductSecreen.css";
+
 function ProductSecreen({ match, history }) {
   const [qty, setQty] = useState(1);
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ function ProductSecreen({ match, history }) {
   }, [dispatch, product, match]);
   return (
     <div className="productSecreen">
-      {loading?<h2>loading...</h2>}
+      {loading ? <h2>loading...</h2> : ''}
       <div className="productSecreen-left">
         <div className="left-image">
           <img

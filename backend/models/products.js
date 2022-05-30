@@ -11,4 +11,4 @@ const productSchema = new mongoose.Schema({
   rating: { type: Number, default: 0 },
   ClientId: { type: mongoose.Schema.Types.ObjectId, ref: "client" },
 });
-module.exports = mongoose.model("product", productSchema);
+module.exports = mongoose.model("products", productSchema);
